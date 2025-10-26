@@ -1,26 +1,30 @@
 package prototypeafui;
 
-import prototypeafui.enums.Color;
-import prototypeafui.enums.Font;
 import prototypeafui.factories.abstractions.UIFactory;
-import prototypeafui.factories.implementations.MacUIFactory;
+import prototypeafui.factories.implementations.PrototypeFactory;
 import prototypeafui.uielements.abstractions.Button;
 import prototypeafui.uielements.abstractions.TextBox;
 import prototypeafui.uielements.abstractions.Window;
+import prototypeafui.uielements.implementations.MacButton;
+import prototypeafui.uielements.implementations.MacTextBox;
+import prototypeafui.uielements.implementations.MacWindow;
+import prototypeafui.uielements.implementations.WindowsButton;
+import prototypeafui.uielements.implementations.WindowsTextBox;
+import prototypeafui.uielements.implementations.WindowsWindow;
 
 public class Main {
 	private static void init(UIFactory factory) {
 		// elements we may want to render in the UI
-		Button acceptButton = factory.getButton(Color.GREEN);
-		Button addItemButton = factory.getButton(Color.GREEN);
-		Button cancelButton = factory.getButton(Color.RED);
+		Button acceptButton = factory.getButton();
+		Button addItemButton = factory.getButton();
+		Button cancelButton = factory.getButton();
 		
-		Window confirmWindow = factory.getWindow(Color.GREEN);
-		Window infoWindow = factory.getWindow(Color.BLUE);
+		Window confirmWindow = factory.getWindow();
+		Window infoWindow = factory.getWindow();
 		
-		TextBox informalText = factory.getTextBox(Font.COMIC);
-		TextBox formalCommonText = factory.getTextBox(Font.ARIAL);
-		TextBox formalImportantText = factory.getTextBox(Font.ARIAL);
+		TextBox informalText = factory.getTextBox();
+		TextBox formalCommonText = factory.getTextBox();
+		TextBox formalImportantText = factory.getTextBox();
 		
 		
 		// now interacting with them, supposing a user is clicking and using the application
@@ -67,6 +71,8 @@ public class Main {
 	}
 	
 	public static void main(String[] agrs) {
-		init(new MacUIFactory()); // <- the kit of cloneable implementations of UIElements is decided here
+		final PrototypeFactory macFactory = new PrototypeFactory(new MacWindow(), new MacButton(), new MacTextBox());
+		final PrototypeFactory windowsFactory = new PrototypeFactory(new WindowsWindow(), new WindowsButton(), new WindowsTextBox());		
+		init(macFactory); // <- the kit of cloneable implementations of UIElements is decided here
 	}
 }

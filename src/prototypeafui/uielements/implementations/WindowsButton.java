@@ -1,4 +1,3 @@
-/*
 package prototypeafui.uielements.implementations;
 
 import prototypeafui.uielements.abstractions.Button;
@@ -13,4 +12,4 @@ public class WindowsButton implements Button {
 		return new WindowsButton(this);
 	}
 }
-*/
+

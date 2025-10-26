@@ -1,4 +1,3 @@
-/*
 package prototypeafui.uielements.implementations;
 
 import prototypeafui.uielements.abstractions.Window;
@@ -13,4 +12,4 @@ public class WindowsWindow implements Window {
 		return new WindowsWindow(this);
 	}
 }
-*/
+

@@ -1,4 +1,3 @@
-/*
 package prototypeafui.uielements.implementations;
 
 import prototypeafui.uielements.abstractions.TextBox;
@@ -13,4 +12,4 @@ public class WindowsTextBox implements TextBox {
 		return new WindowsTextBox(this);
 	}
 }
-*/
+

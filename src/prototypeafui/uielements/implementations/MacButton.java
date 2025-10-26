@@ -1,8 +1,6 @@
-/*
 package prototypeafui.uielements.implementations;
 
 import prototypeafui.uielements.abstractions.Button;
-import prototypeafui.uielements.abstractions.Position;
 
 public class MacButton implements Button {
 	public MacButton() { }
@@ -14,4 +12,4 @@ public class MacButton implements Button {
 		return new MacButton(this);
 	}
 }
-*/
+

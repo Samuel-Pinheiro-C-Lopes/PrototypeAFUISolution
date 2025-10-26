@@ -1,4 +1,4 @@
-/*
+
 package prototypeafui.uielements.implementations;
 
 import prototypeafui.uielements.abstractions.TextBox;
@@ -13,4 +13,4 @@ public class MacTextBox implements TextBox {
 		return new MacTextBox(this);
 	}
 }
-*/
+

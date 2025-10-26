@@ -1,4 +1,3 @@
-/*
 package prototypeafui.uielements.implementations;
 
 import prototypeafui.uielements.abstractions.Window;
@@ -13,4 +12,3 @@ public class MacWindow implements Window {
 		return new MacWindow(this);
 	}
 }
-*/
